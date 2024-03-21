@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times de SP</title>
+</head>
+<body>
+    Para qual time de São Paulo você torçe?
+    <input type="text" id="input_time">
+    <button onclick="timeSP()">
+        Fale sobre esse time
+    </button>
+    <div id="fraseTime"></div>
+    <div style="color:white; background-color: black;"></div>
+</body>
+</html>
+
+<script>function timeSP(){
+    var time=input_time.value
+
+    if (time==`Palmeiras`) {
+        fraseTime.innerHTML=`<div style="color:white; background-color: green;">Quando surge o alviverde imponente</div>`
+    }
+    else if(time==`São Paulo`){
+        fraseTime.innerHTML=`<div style="color:red; background-color: black;">Salve o tricolor paulista</div>`
+    } 
+    else if (time==`Santos`){
+        fraseTime.innerHTML=`Agora quem dá a bola é o Santos`
+    }
+    else if(time==`Corinthians`){
+        fraseTime.innerHTML=`<div style="color:white; background-color: black;">Salve o Corinthians</div>`
+    }
+
+    
+
+} </script>

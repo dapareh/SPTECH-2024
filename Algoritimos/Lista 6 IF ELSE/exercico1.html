@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoEscola</title>
+</head>
+<body>
+    Nome:
+    <input id="input_nome">
+    <br>
+    Idade:
+    <input id="input_idade">
+    <br>
+    <button onclick="analisarAluno()">
+        Avaliar aluno
+    </button>
+    <div id="mostrarAvaliacao"></div>
+</body>
+</html>
+
+<script>
+function analisarAluno(){
+
+var nome= input_nome.value
+var idade= input_idade.value
+
+
+if (idade > 17  ) {
+    mostrarAvaliacao.innerHTML = `${nome} vamos tirar a CNH?`
+} else {
+    mostrarAvaliacao.innerHTML = `${nome} vai jogar PlayStation!`
+}
+
+}
+</script>

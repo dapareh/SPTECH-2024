@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    Digite a nota 1:
+    <input id="input_nota1"><br>
+    Digite a nota 2:
+    <input id="input_nota2"><br>
+<button onclick="calcularMedia()">
+    Verificar situação
+</button>
+<div id="verSituacao"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+<script>
+function calcularMedia(){
+
+var nota1= Number(input_nota1)
+var nota2= Number(input_nota2)
+var media= nota1 + nota2 / 2
+
+if (media =>6) {
+    verSituacao.innerHTML=   `Parabéns, aprovado!`
+} else {
+    verSituacao.innerHTML= ` Tente outra vez...`
+}
+
+}
+
+
+</script>

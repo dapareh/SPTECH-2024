@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequencia do aluno</title>
+</head>
+<body>
+    Frêquencia do aluno:
+    <input id="input_frequencia_aluno"><br>
+    <button onclick="verFrequencia()">
+        Analisar frêquencia
+    </button>
+    <div id="foto_nerd"></div>
+    <div id="foto_turista"></div>
+    
+</body>
+</html>
+
+
+<script>
+function verFrequencia(){
+
+    var frequencia= input_frequencia_aluno.value
+
+
+if (frequencia <50) {
+foto_turista.innerHTML=  `<img src="https://img.freepik.com/fotos-gratis/turista-apontando-para-cima_1368-7017.jpg?w=360&t=st=1710023253~exp=1710023853~hmac=f844b262f5eca550bf06d8c693b32aedfb3c21eaea7e8bd120e7ab01c187de37">`
+    
+} else{ 
+    foto_nerd.innerHTML= 
+foto_turista.innerHTML=  `<img src="https://as1.ftcdn.net/v2/jpg/01/22/53/88/1000_F_122538873_4PtXWBeuaQdj2URrc4JcmyurDCMy1ANw.jpg">`
+}
+
+
+}
+</script>

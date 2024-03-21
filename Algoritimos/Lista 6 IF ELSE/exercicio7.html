@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso elevador</title>
+</head>
+<body>
+    Quantidade de homens no elevador:
+    <input id="input_qtd_homens"><br>
+    Quantidae de mulheres no elevador:
+    <input id="input_qtd_mulheres"><br>
+    <button onclick="ligarElevador()">
+        Ligar elevador
+    </button>
+    <div id="validacaoElevador"></div>
+<div style="color:red;"></div>
+</body>
+</html>
+
+
+<script>
+ function ligarElevador() { 
+
+    var qtdMulheres= Number(input_qtd_mulheres.value)
+    var qtdHomens= Number(input_qtd_homens.value)
+    var pesoHomem =Number(qtdHomens * 90.00)
+    var pesoMulher= Number(qtdMulheres * 70.00)
+    var somaHomem_mulher= pesoHomem + pesoMulher
+   
+if (pesoHomem + pesoMulher<=500) {
+    validacaoElevador.innerHTML=`<div style="color: green;">Elevador vai se mover pois esta com ${somaHomem_mulher}</div>`
+} else{
+validacaoElevador.innerHTML=`<div style="color:red;">Para o elevador se mover alguem precisa descer e perder ${somaHomem_mulher} </div>`
+}
+}
+</script>

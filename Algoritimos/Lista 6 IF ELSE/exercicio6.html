@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    Digite a temperatura do ambiente:
+    <input id="input_temperatura"><br>
+    <button onclick="verClima()">
+        Verificar clima
+    </button>
+    <div id="indicarTemperatura"></div>
+</body>
+</html>
+
+
+<script>
+function verClima(){
+var temperatura= input_temperatura.value
+
+if (temperatura <10) {
+    indicarTemperatura.innerHTML= ` Apropriada p/ conservar alimento`
+} else{
+   indicarTemperatura.innerHTML= `Inapropriada p/ conservar alimento`
+}
+
+}
+</script>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    Quantidade de energia consumida em kWh:
+    <input type="number" id="input_energia_kwh"><br>
+    Bandeira tarifaria da energia:
+    <input id="input_bandeira_tarifa"><br>
+    Volume de água consumida(L):
+    <input type="number" id="input_consumo_agua"><br>
+    Quantidade de vazamentos de agua na casa:
+    <input type="number" id="input_qtd_vazamentos"><br>
+    Volume de gás consumido (L):
+    <input type="number" id="input_consumo_gas"> <br>
+    Quantidade de MB no plano de internet:
+    <input type="number" id="input_qtd_mb"> <br>
+    Possui linha telefonica vinculada á internet?
+    <input type="text" id="input_linha_telefonica"><br>
+    <button onclick="calcularDespesas()">
+        Calcular despesas fixas
+    </button>
+    
+    
+    <div id="resultadoEnergia_bandeira_Verde"></div>
+    <div id="resultadoEnergia_bandeira_Amarela"></div>
+    <div id="resultadoEnergia_bandeira_Vermelha"></div>
+    <div id="resultadoLitros_vazamentos"></div>
+    <div id="resultadoGas"></div>
+    <div id="resultadoInternet_com_telefone"></div>
+    <div id="resultadoInternet_sem_telefone"></div>
+    <div id="gastoTotal"></div>
+
+
+</body>
+</html>
+
+<script> 
+function calcularDespesas() {
+
+//VAR dos inputs
+var energia = Number(input_energia_kwh.value)
+var tarifaBandeira= input_bandeira_tarifa.value
+var agua= Number(input_consumo_agua.value)
+var vazamentosAgua= Number(input_qtd_vazamentos.value)
+var consumoGas= Number(input_consumo_gas.value)
+var qtdMB = Number(input_qtd_mb.value)
+var linhaTel= input_linha_telefonica.value
+
+
+// VAR contas de energia
+var valorKWHverde= energia *(1+ 0.75)
+var valorKHWamarela= energia * (1+ 0.9)
+var valorKWHvermelha= energia * (1+ 1.00)   
+if (energia >=50) {
+    energia *(1+0.10)
+}
+
+//VAR agua 
+ var valorAgua= agua* (1+ 3.50)
+ var aguaXvazamentos= valorAgua * vazamentosAgua
+ 
+//VAR gas
+var valorGas= consumoGas* (1+  2.50)
+
+//VAR internet/telefone
+var valorInternet=qtdMB*(1+ 0.80)
+var valorInterneteTelefone= valorInternet * (1 + 0.25)
+var valorInternetStelefone= valorInternet*(1- 0.075)
+
+//IF's/inner - bandeiras
+
+if (input_bandeira_tarifa.value==`verde`) {
+resultadoEnergia_bandeira_Verde.innerHTML= `Com o consumo de ${energia} kWh na bandeira verde, a conta de energia totaliza R$ ${valorKWHverde}.`
+}
+if (input_bandeira_tarifa.value==`amarela`) {
+resultadoEnergia_bandeira_Amarela.innerHTML=`Com o consumo de ${energia} kWh na bandeira amarela, a conta de energia totaliza R$ ${valorKHWamarela}.`
+}
+if (input_bandeira_tarifa.value==`vermelha`) {
+resultadoEnergia_bandeira_Vermelha.innerHTML=`Com o consumo de ${energia} kWh na bandeira vermelha, a conta de energia totaliza R$ ${valorKWHvermelha}.` 
+}
+
+// inner - agua X vazamento
+resultadoLitros_vazamentos.innerHTML=`Com o consumo de ${agua} litros de água contendo ${vazamentosAgua} vazamentos, a conta de água totaliza R$${aguaXvazamentos}.`
+
+//inner - gas
+resultadoGas.innerHTML=`Com o consumo de ${consumoGas} litros de gás, a conta de gás totaliza R$${valorGas}.`
+
+//IF's / inner -internet/linha telefonica2
+if (linhaTel==`sim`) {
+resultadoInternet_com_telefone.innerHTML=`Com o consumo de ${valorInternet} MB de internet, o valor do plano de internet/telefone totaliza R${valorInterneteTelefone}. `
+} 
+if (linhTel=`nao`)   {
+resultadoInternet_sem_telefone.innerHTML= `Com o consumo de ${valorInternet} MB de internet, o valor do plano de internet/telefone totaliza R${valorInternetStelefone}. `
+}
+
+//inner/IF - gasto total
+if (tarifaBandeira==`verde`)
+if (linhaTel==`sim`) {
+    `Gasto total de despesas mensal: R$${valorKWHverde+aguaXvazamentos+valorGas+valorInterneteTelefone}`
+}
+
+if (tarifaBandeira==`amarela`)
+if (linhaTel==`sim`) {
+    `Gasto total de despesas mensal: R$${valorKHWamarela+aguaXvazamentos+valorGas+valorInterneteTelefone}`
+}
+
+if (tarifaBandeira==`vermelha`)
+if (linhaTel==`sim`) {
+    `Gasto total de despesas mensal: R$${valorKWHvermelha+aguaXvazamentos+valorGas+valorInterneteTelefone}`
+}
+
+if (tarifaBandeira==`verde`)
+if (linhaTel==`nao`) {
+    `Gasto total de despesas mensal: R$${valorKWHverde+aguaXvazamentos+valorGas+valorInternetStelefone}`
+}
+
+if (tarifaBandeira==`amarela`)
+if (linhaTel==`nao`) {
+`Gasto total de despesas mensal: R$${valorKHWamarela+aguaXvazamentos+valorGas+valorInternetStelefone}`
+}
+
+if (tarifaBandeira==`vermelha`)
+if (linhaTel==`nao`) {
+    `Gasto total de despesas mensal: R$${valorKWHvermelha+aguaXvazamentos+valorGas+valorInternetStelefone}`
+}
+
+}</script>

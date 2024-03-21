@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura ser humano</title>
+</head>
+<body>
+    Digite alguma temperatura:
+    <input type="number" id="input_temperatura">
+    <button onclick="analisarTemperatura()">
+        Analisar temperatura
+    </button>
+    <div id="mensagemTemperatura"></div>
+    
+</body>
+</html>
+
+
+<script> function analisarTemperatura(){
+    let temperatura= input_temperatura.value
+     
+    if (temperatura<14) {
+        mensagemTemperatura.innerHTML=`Congelante`
+    }
+
+    else if (temperatura>=14) 
+        if (temperatura<=21) {
+            mensagemTemperatura.innerHTML=`Com Frio`
+        }
+
+    else if (temperatura>21)    
+         if (temperatura <=24) {
+            mensagemTemperatura.innerHTML=`Confortável`
+         }    
+
+    else if (temperatura>24)
+         if (temperatura<=31) {
+            mensagemTemperatura.innerHTML=`Com calor`
+         }
+
+    else {
+        mensagemTemperatura.innerHTML=`Calor escaldante`
+    }     
+}</script>
