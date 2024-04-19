@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>O banco KNAB é sua melhor opção</h1><br>
+    <h2>Empréstimos e Investimentos com as melhores taxas do mercado</h2><br>
+    <h3>Entre com os dados da sua Simulação</h3><br>
+
+    Valor da operação:
+    <input id="input_valor_operacao" placeholder="Valor"><br>
+
+  
+    <select title="Selecionar Operação..." name="selecionar_operacao" id="select_operacao">
+        <option value="emprestimo">Emprestimo</option>
+        <option value="investimento">Investimento</option>
+    </select>
+
+    <select name="Selecionar_prazo" id="">
+    <option value="curto_prazo">Curto</option>
+    <option value="medio_prazo">Médio</option>
+    <option value="longo_prazo">Longo</option>
+    </select>
+
+<button onclick="mostrarResultado()">
+    Mostrar resultado
+</button>
+
+<div id="mostrarResultado"></div>
+
+</body>
+</html>
+
+
+<script> function mostrarResultado(){
+
+let prazo = Selecionar_prazo.value
+let operacao = select_operacao.value
+
+if (prazo==curto_prazo || prazo==medio_prazo) {
+    alert("Esta operação está condicionada ao seu perfil")
+}
+if (operacao==emprestimo) {
+    mostrar
+}
+
+
+} </script>

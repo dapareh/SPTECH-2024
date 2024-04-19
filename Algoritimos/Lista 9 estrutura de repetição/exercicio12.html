@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 12</title>
+</head>
+<body>
+    
+    Qual a tabuada deseja ver na tela (2 a 9):
+    <input type="number" id="input_tabuada">
+    Até que numero a tabuada deve ser construida?
+    <input type="number" id="input_num_final">
+    <br>
+    <button onclick="verTabuada()">
+        Ver Tabuada
+    </button>
+    <div id="div_tabuada"></div>
+
+
+</body>
+</html>
+
+<script>
+    function verTabuada(){
+
+let numeroTabuada= Number(input_tabuada.value)
+let numeroFinal = Number(input_num_final.value)
+
+for(let numero=1; numero<=numeroFinal; numero+=1)
+
+div_tabuada.innerHTML+=`${numeroTabuada} x ${numero} = ${numeroTabuada*numero}<br>`
+
+    }
+</script>

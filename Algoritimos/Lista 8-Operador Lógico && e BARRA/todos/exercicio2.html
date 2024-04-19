@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa governo</title>
+</head>
+<body>
+    Insira sua renda individual:
+    <input type="number" id="input_renda_usuario">
+    Insira sua renda familiar total:
+    <input type="number" id="input_renda_familiar">
+    <button onclick="verificarAjuda()">
+        Verificar ajuda
+    </button>
+</body>
+</html>
+
+<script> function verificarAjuda(){
+    let rendaUsuario= Number(input_renda_usuario.value)
+    let rendaFamiliar=Number(input_renda_familiar.value)
+
+    if (rendaUsuario<=1050 && rendaFamiliar<=2100) {
+        alert("Você terá direito!")
+    }
+    else{
+        alert("Você não terá direito")
+    }
+}  </script>

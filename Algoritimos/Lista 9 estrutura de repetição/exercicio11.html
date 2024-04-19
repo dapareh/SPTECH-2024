@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 11</title>
+</head>
+<body>
+    
+Quantas voltas o carro dará em uma corrida?
+<input type="number" id="input_qtd_voltas">
+<br>
+<button onclick="iniciarCorrida()">
+    Iniciar corrida
+</button>
+
+<div id="div_corrida"></div>
+
+</body>
+</html>
+
+
+<script>
+    function iniciarCorrida(){
+
+let voltasCarro= Number(input_qtd_voltas.value)
+
+for(let contador=1;contador<=voltasCarro;contador+=1)
+
+div_corrida.innerHTML+=`Carro dando ${contador}ª volta<br>`
+div_corrida.innerHTML+=`Corrida finalizada!`
+    }
+</script>

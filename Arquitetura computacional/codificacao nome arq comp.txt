@@ -1,0 +1,74 @@
+1-DAPARE
+
+2-68 65 80 65 82 69
+
+3-44 41 50 41 52 45
+
+4-65 82 69 68 65 80
+
+5-0100-0100 0100-0001 0101-0000 0100-0001 0101-0010 0100-0101
+
+6- 
+
+
+
+
+
+
+
+
+
+
+1-Nome normal maiusculo
+2-Nome em decimal
+3-Nome em hexadecimal
+4-Embaralhando o decimal(2)
+5-Colocando o decimal(2) em binario
+6-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

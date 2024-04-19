@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade avaliativa</title>
+</head>
+
+<body>
+    <h1>Seja bem vindo ao banco KNAB</h1><br>
+    <h2>Simulação de Empréstimos e Investimentos</h2><br>
+    <h3>Entre com os dados da sua conta</h3>
+    <input type="text" id="input_conta" placeholder="Conta">
+    <input type="text" id="input_digito" placeholder="Dígito">
+    <input type="number" id="input_senha" placeholder="Senha" min="10" m9n9>
+    <br>
+    <br>
+    <button onclick="simular()">
+        Simular
+    </button>
+    <div id="mostrarResultado"></div>
+</body>
+
+</html>
+
+<script> function simular() {
+
+        let conta = input_conta.value
+        let digito = input_digito.value
+        let senha = input_senha.value
+
+        if (conta != 0 && digito == conta % 10) {
+            if (digito == 0 || digito == 1 || digito == 2 || digito == 3 || digito == 4)
+
+                if (digito > 3 && digito < 7) {
+
+                    if (digito > 7) {
+
+                    }
+                }
+        } else {
+            alert("Dados inseridos inválidos, certifique-se de que a senha inserida contém pelo menos 10 digitos e um caractere '#' e um '@', e pelo menos um digito numérico ")
+        }
+
+
+
+
+
+    }</script>

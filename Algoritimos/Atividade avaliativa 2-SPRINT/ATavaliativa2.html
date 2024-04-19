@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade avaliativa 2</title>
+</head>
+<body>
+    De qual episodio você deseja começar a assistir a série?(1 a 1100)
+    <input type="number" id="input_ep_serie"> <br>
+
+    Quanto tempo  dísponivel você tem para assistir a série?
+    <input type="number" id="input_tempo_disponivel"><br>
+
+    Unidade de medida do tempo
+    <select id="select_medida_tempo"> Unidade de medida
+    <option id="Horas">Horas</option>
+    <option id="Minutos">Minutos</option>
+    </select> <br>
+
+    Dseja pular a abertura dos episódios?
+    <select  id="select_pular_abertura">
+    <option id="Sim">Sim</option>
+    <option id="Nao">Nao</option>
+    </select> <br>
+
+Deseja pular o encerramento dos episodios?
+<select id="select_pular_encerramento">
+    <option id="Sim">Sim</option>
+    <option id="Nao">Nao</option>
+</select> <br>
+
+<button onclick="assistirEpisodios()">
+    Assistir episódios
+</button>
+
+<div id="div_mostrador"></div>
+    
+
+</body>
+</html>
+
+
+<script>
+    function assistirEpisodios(){
+
+        let epSerie = Number(input_ep_serie.value)
+        let tempoDisp = Number(input_tempo_disponivel.value)
+        let undMedida =  select_medida_tempo
+        let pularAbert = select_pular_abertura
+        let pularEncerra = select_pular_encerramento
+        
+        
+
+        if (epSerie < 1 || epSerie > 1100) {
+        alert("O número do episódio é invalido")
+        } else{
+            div_mostrador.innerHTML=`Episódio:${epSerie}<br> `
+        }
+        
+        for(let tempoTotal=1; tempoTotal<=24; tempoTotal+=1){
+            
+   if (tempoTotal>=1 && tempoTotal<=2) {
+                div_mostrador.innerHTML+=`Minuto ${tempoTotal}:Assistindo abertura <br>`
+            }   
+            if (tempoTotal>2 && tempoTotal<=22) {
+                div_mostrador.innerHTML+=`Minuto ${tempoTotal}: Assistindo o Episódio<br>`
+            } if (tempoTotal > 22 && tempoTotal <=24) {
+                div_mostrador.innerHTML+=`Minuto ${tempoTotal}: Assistindo o encerramento<br>`
+            }
+    }
+
+
+   if (undMedida == "Horas") {
+     let undMDDcerta = tempoDisp * 60
+   } 
+
+   
+        
+        
+        // for(let tempoSabertura =2; tempoSabertura<=24; tempoSabertura+=1 )
+        // for(let tempoSencerramento = 1; tempoSencerramento<=22; tempoSencerramento+=1)
+        // for(let tempoMenor =2; tempoMenor<=20; tempoMenor+=1)
+
+        
+        
+
+
+
+
+
+
+}
+</script>

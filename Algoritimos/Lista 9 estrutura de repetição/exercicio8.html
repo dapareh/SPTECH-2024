@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 8</title>
+</head>
+<body>
+    Digite um numero entre 0 e 200
+    <input type="number" id="input_numero">
+    <button onclick="vivaSete()">
+        Viva o 7!
+    </button>
+    <div id="mostrarResultado"></div>
+</body>
+</html>
+
+<script>function vivaSete(){
+
+let numero = Number(input_numero.value)
+
+mostrarResultado.innerHTML=``
+for(let contador=0;contador<=numero;contador+=1)
+if ((contador % 7)==0) {
+    mostrarResultado.innerHTML+=`${contador}<br>`
+}
+
+
+    
+}
+</script>

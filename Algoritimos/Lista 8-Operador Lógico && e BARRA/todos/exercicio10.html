@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite sua idade:
+    <input type="number" id="input_idade"><br>
+    Digite seu salário:
+    <input type="number" id="input_salario">
+    <button onclick="analisarSituacao()">
+        Analisar situação
+    </button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script> function analisarSituacao(){
+
+let idade= Number(input_idade.value)
+let salario= Number(input_salario.value)
+
+if (idade>18 && salario>2500) {
+    div_mensagem.innerHTML=`Menor de idade e liso`
+} if (idade>18 && salario>=2500) {
+    div_mensagem.innerHTML=`Menor de idade e ostentação`
+} if (idade>=18 && salario>3500) {
+    div_mensagem.innerHTML=`Maior de idade e liso`
+} if (idade>=18 && salario>3500 && salario<=7000) {
+    div_mensagem=`Maior de idade e ostentação`
+}if (idade>=18 && salario>7000) {
+    div_mensagem=`Maior de idade e mega ostentação`
+}
+
+}  </script>

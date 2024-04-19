@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 4</title>
+</head>
+<body>
+    <button onclick="mostrarPares()">
+        S2 pares
+    </button>
+    <div id="mensagemPares"></div>
+</body>
+</html>
+
+<script> function mostrarPares(){
+
+    for( let mostrador=0;mostrador<=100;mostrador+=1){
+    let numero= mostrador % 2
+
+    if (numero == 0) {
+        mensagemPares.innerHTML+=`${mostrador}<br>`
+    }
+    }
+}
+</script>

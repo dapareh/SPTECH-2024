@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos cm de piupiu você tem?
+    <input type="number" id="input_cm">
+    <button onclick="verPeru()">
+        Analisar cacete
+    </button>
+    <div id="verResultado"></div>
+</body>
+</html>
+
+<script>
+    function verPeru(){
+ 
+        let peru= Number(input_cm.value)
+
+        if (peru<10) {
+            alert("Seu piupiu é bem fofinho")
+        }else(
+            alert("Seu piupiu é bem grandao!")
+        )
+
+
+    }
+</script>

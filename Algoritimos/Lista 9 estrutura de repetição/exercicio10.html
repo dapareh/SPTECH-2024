@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 10</title>
+</head>
+<body>
+    <h2>Digite um intervalo crescente de valores numericos</h2>
+
+    Valor inicial:
+    <input type="number" id="input_valor_inicial">
+    Valor final:
+    <input type="number" id="input_valor_final">
+    <br>
+    <button onclick="mostrarPares()">
+        S2 pares
+    </button>
+
+    <div id="div_pares"></div>
+
+
+</body>
+</html>
+
+
+<script>
+   function mostrarPares(){
+
+        let valorInicial= Number(input_valor_inicial.value)
+        let valorFinal= Number(input_valor_final.value)
+
+        for( let numero=valorInicial; numero<=valorFinal;numero+=1)
+        
+        if (numero % 2 ==0) {
+            div_pares.innerHTML+=`${numero}<br>`  
+        }
+
+    }
+</script>

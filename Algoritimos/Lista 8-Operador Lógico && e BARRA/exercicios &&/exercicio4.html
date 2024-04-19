@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Horario que consome Netlfix:
+    <input type="number" id="input_horario">
+    <button onclick="verRecomendacao()">
+        Ver recomendação
+    </button>
+    <div id="mostrarMensagem"></div>
+</body>
+</html>
+
+<script> function verRecomendacao(){
+ let horario= Number(input_horario.value)
+ 
+if (horario>=19 && horario<=21) {
+    mostrarMensagem.innerHTML=`Não é recomendável que você assista sua série favorita no horário ${horario}h!`
+} else {
+    mostrarMensagem.innerHTML=`O horário ${horario}h é adequado para assistir sua série favorita!`
+}
+
+}</script>

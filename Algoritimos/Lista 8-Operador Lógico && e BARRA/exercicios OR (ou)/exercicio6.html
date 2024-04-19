@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora da cansaço aprimorada</title>
+</head>
+<body>
+    <h1>Calculadora de cansaço aprimorada SPTech</h1>
+
+    Meio de transporte:
+    <input type="text" id="input_meio_de_transporte"><br>
+    Distancia de casa até a faculdade:
+    <input type="text" id="input_distancia_casa"><br>
+    <button onclick="calcularCansaço()">Calcular cansaço</button>
+
+
+</body>
+</html>
+
+<script> function calcularCansaço(){
+let meioTransporte= input_meio_de_transporte.value
+let distancia= input_distancia_casa.value
+
+if (distancia<=10) 
+if(meioTransporte=="Carro"||meioTransporte=="Metrô"||meioTransporte=="Ônibus"){
+    alert("Tá tranks")
+}else {
+    alert("È...um pouco cansado...")
+}
+
+if (distancia>10)
+if(meioTransporte=="Carro"){
+ alert("È...um pouco cansado...")
+}
+if (distancia>10)
+if(meioTransporte=="Metrô"||meioTransporte=="Ônibus"){
+    alert("Bem cansado")
+} 
+else {
+    alert("Vish,tá só o pó...")
+}
+}
+
+</script>

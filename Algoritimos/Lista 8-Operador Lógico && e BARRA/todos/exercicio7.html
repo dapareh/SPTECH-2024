@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Marca da TV ("Samsung", "LG", "Mondial" e "Britânia") :
+    <input type="text" id="input_marca_tv"><br>
+    Preço da TV:
+    <input type="number" id="input_preco_tv"><br>
+    <button onclick="analisarCompra()">
+    Analisa compra 
+</button>
+<div id="exibirMensagem"></div>
+
+</body>
+</html>
+
+
+<script> function analisarCompra(){
+
+let marcaTv= input_marca_tv.value
+let precoTv= input_preco_tv.value
+
+if (precoTv<800 && precoTv>2000) {
+    alert("TV fora da faixa de preço")
+} if (precoTv>=800 && precoTv<=2000 && marcaTv=="Mondial" && marcaTv=="Britânia") {
+    alert("")
+}
+
+}
+
+</script>

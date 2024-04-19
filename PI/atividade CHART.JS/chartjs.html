@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando o CHART JS</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body style="display: flex;">
+
+<div>
+    <canvas id="myChart" style="position: relative; height:40vh; width:40vw"></canvas>
+</div>
+
+<div>
+    <canvas id="myChart2" style="position: relative; height:40vh; width:40vw"></canvas>
+</div>
+
+    
+</body>
+<script>
+    const labels =[
+        '16:40',
+        '16:45',
+        '16:50',
+        '16:55',
+        '17:00',
+        '17:55'
+    ];
+
+    const data ={
+        labels: labels,
+        datasets: [{
+            label: 'My first dataset',
+            backgroundColor:'rgb(255, 99, 132)',
+            borderColor: 'rgb (255, 99, 132) ',
+            data : [40,44,43,44,41,42],
+
+        },
+    
+        {
+            label: 'My first dataset',
+            backgroundColor:'rgb(0, 0, 255)',
+            borderColor: 'rgb (0, 0, 255) ',
+            data : [24,26,23,22,24,27,25],  
+            
+        }
+    ]
+        
+    
+    };
+    
+
+    const config ={
+        type: 'line',
+        data: data,
+        options:{}
+    };
+
+    const config2 ={
+        type: 'bar',
+        data: data,
+        options:{}
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+</script>
+
+
+
+</html>

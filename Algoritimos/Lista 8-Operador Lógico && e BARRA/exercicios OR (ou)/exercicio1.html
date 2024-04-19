@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota vestibulares</title>
+</head>
+<body>
+    Nota do ENEM:
+    <input type="number" id="input_nota_enem"></input><br>
+    Nota do vestibular interno:
+    <input type="number" id="input_nota_vest_interno"></input>
+    <button onclick="fazerAvaliacao()">
+        Avaliação
+    </button>
+    
+</body>
+</html>
+
+<script> function fazerAvaliacao(){
+    let notaEnem= Number(input_nota_enem.value)
+    let notaVestInterno= Number(input_nota_vest_interno.value)
+
+    if (notaEnem>=800 || notaVestInterno>=700) {
+        alert("Parabéns!Aprovado")
+    } else {
+        alert("Tente semestre que vem")
+    }
+
+}</script>
